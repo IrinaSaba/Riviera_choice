@@ -1,0 +1,87 @@
+<main class="modify-service-by-id">
+	<section class="modify-service-by-id">
+		<section class="modif-service-by-id">>
+		<h2>Modify Service by Id</h2>
+		    
+		     <form method="post" enctype="multipart/form-data">
+				<p>
+					<label for="title">Name of the Service</label>
+				</p>
+				<p>
+					<input type="text" name="title" id="title" value="<?=  htmlspecialchars($service['title']) ?>"/>
+				</p>
+				<p>	
+					<label for="description">Description</label> 
+				</p>
+				<p>
+					<textarea class="description-service-by-id" name="description" id="description"><?= htmlspecialchars($service['description']) ?></textarea>
+				</p>
+				<p>
+					<label for='image'>Foto</label>
+				</p>
+				<p>
+					<img class="photo-article-blog" src="<?= htmlspecialchars($service['src']) ?>" alt="photo from bdd">
+				</p>
+				<p>
+					<input type="file" name="image" id="image">
+				
+					<input type="hidden" name="imageBdd" id="imageBdd" value="<?= htmlspecialchars($service['src']) ?>"/>
+				</p>
+				<p>	
+					<label for="nameImage">Name of the foto</label> 
+				</p>
+				<p>
+					<textarea class="nameImage" name="nameImage" id="nameImage"><?= htmlspecialchars($service['alt']) ?></textarea>
+				</p>
+				<p>
+					<label for="title_service">Name of the Service</label>
+				</p>
+				<p>
+					<input type="text" name="title_service" id="title_service" value="<?=  htmlspecialchars($service['title_service']) ?>"/>
+				</p>
+				<p>
+					<button class="button-add" type="submit">Change</button>
+				</p>	 
+			</form>
+		</section>
+		<section>
+			<h2>List of services</h2>
+			 	<table class="modify-service-by-id">
+		            <tr>
+		                <th class="table-head">Title service</th>
+		                <th class="table-head">Service</th>
+		                <th class="table-head">Modify</th>
+		                <th class="table-head">Delete</th>
+		            </tr>
+		            
+		           	<?php foreach($listservices as $listservice): ?>
+		            <tr>
+		            	<td><?= htmlspecialchars($service['title_service']) ?></td>
+		               	<td><?= htmlspecialchars($listservice['services']) ?></td>
+				        <td><a class="clickmodif" href="index.php?page=modifyservicebyid&id=<?= htmlspecialchars($listservice['id']) ?>"><i class="fas fa-pen-nib"></i></a></td>
+		                <td><a class="clickdelete js-confirm-button"  data-url="index.php?page=deleteservicebyid&id=<?= htmlspecialchars($listservice['id']) ?>"><i class="fas fa-trash-alt"></i></a></td>
+		             </tr> 
+		             <?php endforeach; ?>
+				</table>
+	
+				<h2 class="modify-network-by-id">List of networks</h2>
+			 	<table class="modify-network-by-id">
+		            <tr>
+		                <th class="table-head">Name Network</th>
+		                <th class="table-head">Url network</th>
+		                <th class="table-head">Modify</th>
+		                <th class="table-head">Delete</th>
+		            </tr>
+		            
+		           	<?php foreach($nameNetworks as $nameNetwork): ?>
+		            <tr>
+		            	<td class="network-back"><i class="<?= htmlspecialchars($nameNetwork['name_network']) ?>"></i></td>
+		               	<td><?= htmlspecialchars($nameNetwork['url']) ?></td>
+				        <td><a class="clickmodif" href="index.php?page=modifynetworkbyid&id=<?= htmlspecialchars($nameNetwork['id']) ?>"><i class="fas fa-pen-nib"></i></a></td>
+		                <td><a class="clickdelete js-confirm-button" data-url="index.php?page=deletenetworkbyid&id=<?= htmlspecialchars($nameNetwork['id']) ?>"><i class="fas fa-trash-alt"></i></a></td>
+		             </tr> 
+		             <?php endforeach; ?>
+				</table>	
+		</section>	
+	</section>
+</main>

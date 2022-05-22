@@ -1,0 +1,56 @@
+<main class="modif-photo-slider-art">
+	<section class="modif-photo-slider-art">
+		<section class="modif-photo-slider">
+		<h2>Modify photo slider by Article</h2>
+			<form method="post" enctype="multipart/form-data">
+				<p>
+				    <label for='article'>Name of the Article</label>
+				</p>
+				<p>
+					<select name="article" id="article">
+						 <option value="">--Please choose name of the Article--</option>
+		                 <?php foreach($articlenames as $articlename): ?>
+		                 <option value="<?= htmlspecialchars($articlename['id']) ?>"><?= htmlspecialchars($articlename['title']) ?></option>
+		        		 <?php endforeach; ?>
+		        	</select>	 
+		        </p>
+				<p>
+					<label for='image'>Foto</label>
+				</p>
+				<p>
+					<input type="file" name="image" id="image">
+					<input type="hidden" name="imageBdd" id="imageBdd" value="<?=  htmlspecialchars($articlesliderId['srcs']) ?>"/>
+				</p>
+				<p>	
+					<label for="nameImage">Name of the foto</label>
+				</p>
+				<p>
+					<input name="nameImage" id="nameImage" value="<?=  htmlspecialchars($articlesliderId['alts']) ?>"/>
+				</p>
+				<button class="button-title" type="submit">Modify Photo</button>
+			</form>
+		</section>
+		<section class="modif-photo-slider">
+			<h2> All photo slider of this Article</h2> 
+			<h2>"<?= htmlspecialchars($articlesliderId['titles']) ?>"</h2>
+		    <table>
+	            <tr>
+	            	<th>Photo</th>
+	                <th>Name of the Photo</th>
+	                <th>Date of creation Art</th>
+	            </tr>
+	            	 <?php foreach($articleslider as $articleslide): ?>
+	            	 <?php if($articlesliderId['id_article']== $articleslide['id_article']):?>
+	            <tr>
+	                <td><img class="photo-article-slider" src="<?= htmlspecialchars($articleslide['srcs']) ?>" alt="photo from bdd"></td>
+	                <td><?= htmlspecialchars($articleslide['alts']) ?></td>
+	                 <td><?= htmlspecialchars($articleslide['date']) ?></td>
+	                <?php endif; ?>
+	                <?php endforeach; ?>
+	            </tr>
+	        </table>
+	     </section>   
+    </section>    
+</main>    
+	
+	

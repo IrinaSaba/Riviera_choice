@@ -1,0 +1,27 @@
+<main class="services">
+	<section class="services-present">
+		<?php foreach($services as $service): ?>
+			<h2 class="titles"><?= htmlspecialchars($service['title']) ?></h2>
+			<div class="services-information">	
+				<img class="history-services" src="<?= htmlspecialchars($service['src']) ?>" alt="<?= htmlspecialchars($service['alt']) ?>">
+				<div class="service-story"><?= htmlspecialchars($service['description']) ?>
+					<h4 class="separate-service"><?= htmlspecialchars($service['title_service']) ?></h4>
+						<ul>
+						<?php foreach($listservices as $listservice): ?>
+						<?php if($listservice['id_services']== $service['id']):?>
+							<li><?= htmlspecialchars($listservice['services']) ?> </li> 
+						<?php endif; ?> 
+						<?php endforeach; ?>
+						</ul>
+					<div class="network-info-service">
+						<?php foreach($serviceNetwork as $serviceNet): ?> 
+						<?php if($serviceNet['id_services']== $service['id']):?>
+							<a href="<?= htmlspecialchars($serviceNet['url']) ?>" target="_blank" class="network"><i class="<?= htmlspecialchars($serviceNet['name_network']) ?>"></i></a>
+						<?php endif; ?> 
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>		
+		<?php endforeach; ?>
+	</section>
+</main>

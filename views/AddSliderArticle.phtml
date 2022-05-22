@@ -1,0 +1,55 @@
+<main class="add-photo-slider-article">	
+	<section class="add-photo-slider-article">
+		<h2>Add photo to slider Article </h2>
+		<form method="post" enctype="multipart/form-data">
+			<p>
+			    <label for='article'>Name of the Article</label>
+			</p>
+			<p>
+				<select name="article" id="article">
+				    <option value="">--Please choose Article--</option>
+				    <?php foreach($articlenames as $articlename): ?>
+	                <option value="<?= htmlspecialchars($articlename['id']) ?>"><?= htmlspecialchars($articlename['title']) ?></option>
+	                <?php endforeach; ?>
+	            </select>
+	        </p>
+			<p>
+				<label for='image'>Foto</label>
+			</p>
+			<p>
+				<input type="file" name="image" id="image">
+				<input type="hidden" name="imageBdd" id="imageBdd" value=""/>
+			</p>
+			<p>	
+				<label for="nameImage">Name of the foto</label> 
+			</p>
+			<p>
+				<input name="nameImage" id="nameImage"/>
+			</p>
+			<button class="button-title" type="submit">Add Photo</button>
+		</form>  
+			 <h2> All photos of all Articles</h2>
+	   <table>
+            <tr>
+                <th>Article</th>
+                <th>Photo</th>
+                <th>Name of the Photo</th>
+                <th>Date of creation</th>
+                <th>Modify</th>
+                <th>Delete</th>
+            </tr>
+           	<?php foreach($articleslider as $articleslide): ?>
+            <tr>
+               	<td><?= htmlspecialchars($articleslide['title']) ?></td>
+                <td><img class="photo-article-slider" src="<?= htmlspecialchars($articleslide['srcs']) ?>" alt="<?= htmlspecialchars($articleslide['alts']) ?>"></td>
+                <td><?= htmlspecialchars($articleslide['alts']) ?></td>
+                <td><?= htmlspecialchars($articleslide['date']) ?></td>
+                <td><a class="clickmodif" href="index.php?page=modifyphotoarticleslider&id=<?= htmlspecialchars($articleslide['id']) ?>"><i class="fas fa-pen-nib"></i></a></td>
+                <td><a class="clickdelete js-confirm-button" data-url="index.php?page=deletephotoarticleslider&id=<?= htmlspecialchars($articleslide['id']) ?>"><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+           	<?php endforeach; ?>
+        </table>
+    </section>    
+</main>   
+	
+	

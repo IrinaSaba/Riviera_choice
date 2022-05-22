@@ -1,0 +1,54 @@
+<main class="modifFooter">
+	<section class="modifFooter">
+		<section>
+			<h2>Modify Footer :</h2>
+		     <form method="post" enctype="multipart/form-data"> 
+				<p>
+					<label for="titleFollow">Name of the title Social Media : </label>
+				</p>
+				<p>
+					<input type="text" name="titleFollow" id="titleFollow" value="<?= htmlspecialchars($footer['title_follow']) ?>"/>
+				</p>
+				<p>
+					<label for="titleContact">Name of the title number :</label>
+				</p>
+				<p>
+					<input type="text" name="titleContact" id="titleContact" value="<?= htmlspecialchars($footer['title_contact']) ?>"/>
+				</p>
+				<p>
+					<label for="phone">Phone :</label>
+				</p>
+				<p>
+					<input type="tel" name="phone" id="phone" value="<?= htmlspecialchars($footer['phone']) ?>"/>
+				</p>
+				<p>
+					<label for="email">Email :</label>
+				</p>
+				<p>
+					<input type="text" name="email" id="email" value="<?= htmlspecialchars($footer['email']) ?>"/>
+				</p>
+				<button class="button-title" type="submit">Change</button>
+			</form>
+		</section>
+		<section>
+			<h2>Add address to Network :</h2> 
+			<a class="button-title" href="createnetwork">Add new network</a>
+	        <table>
+	            <tr>
+	                <th>Catégorie</th>
+	                <th>URL</th>
+	                <th>Modify</th>
+	                <th>Supprimer</th>
+	            </tr>
+	         	<?php foreach($footerNetwork as $footerNet): ?>
+	            <tr>
+	                <td class="network-back"><i class="<?= htmlspecialchars($footerNet['name_network']) ?>"></i></td>
+	                <td><p><a><?= htmlspecialchars($footerNet['url']) ?></a></p></td>
+	              	<td><a class="clickmodif" href="index.php?page=modifynetwork&id=<?= htmlspecialchars($footerNet['id']) ?>"><i class="fas fa-pen-nib"></i></a></td>
+	              	<td><a class="clickdelete js-confirm-button" data-url="index.php?page=deletenetwork&id=<?= htmlspecialchars($footerNet['id']) ?>"><i class="fas fa-trash-alt"></i></a></td>
+	            </tr>
+	           <?php endforeach; ?>
+	        </table>
+    	</section>
+    </section>	
+</main>

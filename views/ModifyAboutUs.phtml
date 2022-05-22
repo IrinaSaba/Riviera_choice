@@ -1,0 +1,61 @@
+<main class="modifAbout">
+	<div class="history-info">
+		<h2>Modify About us</h2>
+		    
+		     <form method="post" enctype="multipart/form-data">
+				<p>
+					<label for="title">Name of the title</label>
+				</p>
+				<p>
+					<input type="text" name="title" id="title" value="<?= htmlspecialchars($aboutus['title']) ?>"/>
+				</p>
+				<p>	
+					<label for="history">History</label> 
+				</p>
+				<p>
+					<textarea class="history-about" name="history" id="history"><?= htmlspecialchars($aboutus['history']) ?></textarea>
+				</p>
+				<p>
+					<label for='image'>Foto</label>
+				</p>
+				<p>
+					<img class="photo-article-blog" src="<?= htmlspecialchars($aboutus['src']) ?>" alt="some photo from bbd">
+				</p>
+				<p>
+					<input type="file" name="image" id="image">
+				
+					<input type="hidden" name="imageBdd" id="imageBdd" value="<?= htmlspecialchars($aboutus['src']) ?>"/>
+				</p>
+				<p>	
+					<label for="nameImage">Name of the foto</label> 
+				</p>
+				<p>
+					<textarea class="nameImage" name="nameImage" id="nameImage"><?= htmlspecialchars($aboutus['alt']) ?></textarea>
+				</p>
+				<p>
+					<button class="button-add" type="submit">Change</button>
+				</p>	 
+			</form>
+	</div>		
+	<div class="history-slider">		
+			<h2>Modify Slider</h2>
+			
+			<a class="button-title" href="addsliderabout">Add new Photo to slider</a>
+		    <table>
+		        <tr>
+		            <th class="table-head">Photo</th>
+		            <th class="table-head">Photo description</th>
+		            <th class="table-head">Modify</th>
+		             <th class="table-head">Delete</th>
+		        </tr>
+		      	<?php foreach($aboutSlider as $aboutSlide): ?>
+		        <tr>
+					 <td><img class="photo-aboutus-slider" src="<?= htmlspecialchars($aboutSlide['src']) ?>" alt="some photo from bbd"></td>
+		            <td><?= htmlspecialchars($aboutSlide['alt']) ?></td>
+		            <td><a class="clickmodif" href="index.php?page=modifyslider&id=<?=  htmlspecialchars($aboutSlide['id']) ?>"><i class="fas fa-pen-nib"></i></a></td>
+		            <td><a class="clickdelete js-confirm-button" data-url="index.php?page=deleteslider&id=<?= htmlspecialchars($aboutSlide['id']) ?>"><i class="fas fa-trash-alt"></i></a></td>
+		        </tr>
+		        <?php endforeach; ?>
+		    </table>
+	</div>
+</main>

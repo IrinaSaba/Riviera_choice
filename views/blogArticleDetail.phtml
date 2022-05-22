@@ -1,0 +1,62 @@
+<main class="blog">
+	<section class="blog-article-comment">
+		<h2><?= htmlspecialchars($articl['title']) ?></h2>
+		<div class="blog-agency-date">	
+			<div class="blog-agency">	
+						<!-- Slideshow container -->
+					<div class="slideshow-container">
+						<?php foreach($sliderarticle as $sliderarticl): ?>
+						  <div class="mySlides fade">
+						     <img src="<?= htmlspecialchars($sliderarticl['srcs']) ?>" alt="<?= htmlspecialchars($sliderarticl['alts']) ?>" style="width:100%">
+						  </div>
+						  <!-- Next and previous buttons -->
+						  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+						<?php endforeach; ?>  
+				    </div>
+				<p class="history-day-blog"><?= htmlspecialchars($articl['description']) ?></p>
+			</div>
+			<p class="dates"> Date of creation : <?= htmlspecialchars($articl['date']) ?> </p>
+		</div>
+	
+		<section class="leave-comment">
+			<div>
+				<h2>Commentaires: <?= htmlspecialchars($commentsnb['nb']) ?></h2>
+				<table class="blog-page-comments">
+					
+						<?php foreach($commentes as $commen): ?>
+					<tr>
+						<td>Name :  <?= htmlspecialchars($commen['name']) ?></td>
+					</tr>
+					<tr>
+						<td>Comments : <?= htmlspecialchars($commen['comment']) ?></td>
+					</tr>
+					<tr>
+						<td>Date : <?= htmlspecialchars($commen['date_comment']) ?></td>
+					</tr>
+						 <?php endforeach; ?>
+				</table>
+			</div>	
+			<div class="add-your-comment">
+					
+				<h3>Add your comment</h3>
+				
+				<form method="post" > 
+					<p>
+						<label class="select-comment" for="nameUser">Name</label>
+					</p>	
+					<p>	
+						<input type="text" name="nameUser" id="nameUser"/>
+					</p>
+					<p>	
+						<label class="select-comment" for="commentaire">Comment</label>
+					</p>
+					<p>
+						<input type="text" name="commentaire" id="commentaire"/>
+					</p>	
+					<button class="button-contact" type="submit">Send</button>
+				</form>
+			</div>	
+		</section>		
+	</section>
+</main>

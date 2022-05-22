@@ -1,0 +1,37 @@
+<main class="modify-blog-day">
+    <section class="modify-blog-day">
+    	<h2>Modify Blog</h2>
+	    <table>
+            <tr>
+                <td><a class="button-title" href="addnewart">Add new Article</a></td>
+                <td><a class="button-title" href="addnewsliderart">Add new Slider</a></td>
+                <td><a class="button-title" href="showallcomments">All Comments</a></td>
+            </tr>     
+        </table>
+                 
+        <table class="modif-blog">
+            <tr>
+                <th class="table-head">Title</th>
+                <th class="table-head">Description</th>
+                <th class="table-head">First Photo src</th>
+                <th class="table-head">Photo alt</th>
+                <th class="table-head">Date of creation</th>
+                <th class="table-head">Number of comments</th>
+                <th class="table-head">Modify</th>
+                <th class="table-head">Delete</th>
+            </tr>
+               <?php foreach($articles as $article): ?>
+            <tr>
+               	<td><?= htmlspecialchars($article['title']) ?></td>
+                <td><?= htmlspecialchars($article['description30']) ?></td>
+                <td><img class="photo-article-blog" src="<?= htmlspecialchars($article['src']) ?>" alt="photo from bbd"></td>
+                <td><?= htmlspecialchars($article['alt']) ?></td>
+                <td><?= htmlspecialchars($article['date']) ?></td>
+                <td class="number"><a href="index.php?page=modifycomments&id=<?= htmlspecialchars($article['id']) ?>"><?= htmlspecialchars($article['nb']) ?></a></td>
+                <td><a class="clickmodif" href="index.php?page=modifyarticle&id=<?= htmlspecialchars($article['id']) ?>"><i class="fas fa-pen-nib"></i></a></td>
+                <td><a class="clickdelete js-confirm-button"  data-url="index.php?page=deletearticle&id=<?= htmlspecialchars($article['id']) ?>"><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+               <?php endforeach; ?>
+        </table>
+    </section>
+</main>

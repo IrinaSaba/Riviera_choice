@@ -1,0 +1,38 @@
+# activation de la réécriture d'urls
+Options +FollowSymlinks
+RewriteEngine on
+
+php_value upload_max_filesize 60M
+php_value post_max_size 62M
+
+# un commentaire
+RewriteRule ^admin$  index.php?page=admin [L]
+RewriteRule ^about$  index.php [L]
+RewriteRule ^services$  index.php?page=services [L]
+RewriteRule ^blog$  index.php?page=blog [L]
+RewriteRule ^article$  index.php?page=article [L]
+RewriteRule ^contact$  index.php?page=contact [L]
+RewriteRule ^dashboard$  index.php?page=dashboard [L]
+
+
+RewriteRule ^modifyaboutus$  index.php?page=modifyaboutus [L]
+RewriteRule ^modifyfooter$  index.php?page=modifyfooter [L]
+RewriteRule ^createnetwork$  index.php?page=createnetwork [L]
+RewriteRule ^modifyblog$  index.php?page=modifyblog [L]
+RewriteRule ^modifycontact$  index.php?page=modifycontact [L]
+RewriteRule ^modifservices$  index.php?page=modifservices [L]
+RewriteRule ^addnewservice$  index.php?page=addnewservice [L]
+RewriteRule ^addnewtypeofservice$  index.php?page=addnewtypeofservice [L]
+RewriteRule ^addnewNetworkservice$  index.php?page=addnewNetworkservice [L]
+RewriteRule ^modifyservice$  index.php?page=modifyservice [L]
+RewriteRule ^deleteservicebyid$  index.php?page=deleteservicebyid [L]
+RewriteRule ^modifyadmin$  index.php?page=modifyadmin [L]
+RewriteRule ^addsliderabout$  index.php?page=addsliderabout [L]
+RewriteRule ^modifyslider$  index.php?page=modifyslider [L]
+RewriteRule ^addnewservice$  index.php?page=addnewservice [L]
+RewriteRule ^addnewtypeofservice$  index.php?page=addnewtypeofservice [L]
+RewriteRule ^addnewnetwork$  index.php?page=addnewnetwork [L]
+RewriteRule ^addnewart$ index.php?page=addnewart [L]
+RewriteRule ^addnewsliderart$ index.php?page=addnewsliderart [L]
+RewriteRule ^showallcomments$ index.php?page=showallcomments [L]
+RewriteRule ^createnetwork$ index.php?page=createnetwork [L]

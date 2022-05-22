@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content=" Riviera choice your agency">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+		<link rel="stylesheet" href="asset/css/style.css">
+		<link rel="stylesheet" href="asset/css/mobile.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="shortcut icon" type="image/png" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<title>Riviera choice</title>
+	</head>
+	<body>
+		<div class="body">
+			<header class="header">
+				<nav class="navigation">
+					<a href="about" class="logo"><img  src="asset/img/Logo1.png" alt="Logo for Riviera choice"></a>
+						<a class="nav" href="about">About us</a>
+						<a class="nav" href="services">Services</a>
+						<a class="nav" href="blog">Blog</a>
+						<!--<a class="nav" href="contact">Contact us</a>-->
+					<div>
+						<?php if(isset($_SESSION['admin'])): ?>
+							<a class="nav" href="dashboard">Dashboard</a>
+        		    		<p class="hi">Hi <?= $_SESSION['admin'] ?></p>	
+	        				<a class="nav" href="index.php?page=admin&action=deco">Sign out</a>
+		            	<?php endif; ?>
+		            </div>
+				</nav>
+			</header>
+			<?php include $template ?>
+		</div>
+		<div class="content">
+		</div>
+		<footer class="container-footer">
+			<section class="container-footer-flex">
+				<section class="copyright">
+					<a class="logo-place" href="about">
+					<img class="logo1" src="asset/img/Logo1.png" alt="Logo for Riviera choice"></a>
+					<div class="contact-social">			
+						<p class="contact"><?= htmlspecialchars($footer['title_follow']) ?></p>
+						<table>
+							<tr>
+								<?php foreach($footerNetwork as $footerNet): ?> 
+								<td><a class="networks" href="<?= htmlspecialchars($footerNet['url']) ?>" target="_blank"><i class="<?= htmlspecialchars($footerNet['name_network']) ?>"></i></a></td>
+								<?php endforeach; ?>
+							</tr>
+						</table>
+					</div>
+					<div class="contact-invisible">	
+						<p class="contact-contact"><?= htmlspecialchars($footer['title_contact']) ?></p>
+						<p class="tel"><a href="+1999999888"><i class="fas fa-phone-square-alt"></i> <?= htmlspecialchars($footer['phone']) ?></a></p>
+					</div>	
+					<div class="contact-invisible">	
+						<p class="contact"><a href="mailto:info@rievrierachoice.com"><i class="fas fa-at"></i><?= htmlspecialchars($footer['email']) ?></a>
+						</p>
+					</div>
+				</section>
+				<div>
+					<p style="text-align: center; font-size: 12px; font-family: Lato;">COPYRIGHT © 2022 Irina Sabaliauskiene</p>
+				</div>
+			</section>	
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="asset/js/typing-effect.js"></script>
+		<script src="asset/js/delete-button.js"></script>
+		<script src="asset/js/contactform.js"></script>
+		<script src="asset/js/slider.js"></script>
+	</body>
+</html>
+	
+	
+	

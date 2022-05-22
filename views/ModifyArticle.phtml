@@ -1,0 +1,42 @@
+<main class="modify-blog-day">
+    <section class="modify-blog-day">
+		<h2>Modify Article</h2>
+		<form method="post" enctype="multipart/form-data"> 
+   			<p>
+				<label for="title">Name of the Article</label>
+			</p>
+			<p>
+				<input type="text" name="title" id="title" value="<?= htmlspecialchars($article['title']) ?>"/>
+			</p>
+			<p>	
+				<label for="descript">Description</label> 
+			</p>
+			<p>
+				<textarea name="descript" id="descript"><?= htmlspecialchars($article['description']) ?></textarea>
+			</p>
+			<p>
+				<label for='image'>Firts Foto of the blog</label>
+			</p>
+			<p>
+				<input type="file" name="image" id="image">
+			</p>
+			<p>
+				<input type="hidden" name="imageBdd" id="imageBdd" value="<?=  htmlspecialchars($article['src']) ?>"/>
+			</p>
+			<p>	
+				<label for="nameImage">Name of the foto</label> 
+			</p>
+			<p>
+				<input name="nameImage" id="nameImage" value="<?=  htmlspecialchars($article['alt']) ?>"/>
+			</p>
+			<p>	
+				<label for="date">Date of creation</label> 
+			</p>
+			<p>
+				<input name="date" id="date" value="<?=  htmlspecialchars($article['date']) ?>"/>
+			</p>
+
+			<button class="button-title" type="submit">Change</button>
+		</form>
+	</section>
+</main>

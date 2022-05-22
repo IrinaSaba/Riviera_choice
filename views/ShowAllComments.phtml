@@ -1,0 +1,23 @@
+<main class="show-all-comments">
+    <section class="show-all-comments">
+    	<h2>List of the comments: <?= htmlspecialchars($commentsNb['nb']) ?></h2>
+        <table>
+            <tr>
+                <th>Title of Article</th>
+                <th>Comments</th>
+                <th>Name</th>
+                <th>Date of creation</th>
+                <th>Delete</th>
+            </tr>
+                <?php foreach($allcomments as $allcomment): ?>
+            <tr>
+               	<td><?= htmlspecialchars($allcomment['title']) ?></td>
+                <td><?= htmlspecialchars($allcomment['comment']) ?></td>
+                <td><?= htmlspecialchars($allcomment['name']) ?></td>
+                <td><?= htmlspecialchars($allcomment['date_comment']) ?></td>
+                <td><a  class="clickdelete js-confirm-button" data-url="index.php?page=deletecomments&id=<?= htmlspecialchars($allcomment['id']) ?>"><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+                <?php endforeach; ?>
+        </table>
+    </section>
+</main>

@@ -1,0 +1,60 @@
+<main class="modify-contact">
+	<section class="modify-contact">
+	<h2>Modify Contact</h2>
+	     <form method="post" enctype="multipart/form-data"> 
+	  		<p>
+				<label for="title">Name of the title</label>
+			</p>
+			<p>
+				<input type="text" name="title" id="title" value="<?= htmlspecialchars($contactus['title_contact']) ?>"/>
+			</p>
+			<p>
+				<label for="title">Text of the contact</label>
+			</p>
+			<p>
+				<input type="text" name="text" id="text" value="<?= htmlspecialchars($contactus['text']) ?>"/>
+			</p>
+			<p>
+				<label for="title">Title: Name</label>
+			</p>
+			<p>
+				<input type="text" name="titleName" id="titleName" value="<?= htmlspecialchars($contactus['title_name']) ?>"/>
+			</p>
+			<p>
+				<label for='image'>Foto</label>
+				<img class="photo-contact" src="<?= htmlspecialchars($contactus['src']) ?>" alt="photo from bdd">
+			</p>
+			<p>
+				<input type="file" name="image" id="image">
+				
+				<input type="hidden" name="imageBdd" id="imageBdd" value="<?= htmlspecialchars($contactus['src']) ?>"/>
+			</p>
+			<p>	
+				<label for="nameImage">Name of the foto</label> 
+			</p>
+			<p>
+				<textarea name="nameImage" id="nameImage"><?= htmlspecialchars($contactus['alt']) ?></textarea>
+			</p>
+			<p>
+				<label for="title">Title: Email</label>
+			</p>
+			<p>
+				<input type="text" name="email" id="email" value="<?= htmlspecialchars($contactus['title_email']) ?>"/>
+			</p>
+			<p>
+				<label for="title">Title: Phone</label>
+			</p>
+			<p>
+				<input type="text" name="phone" id="phone" value="<?= htmlspecialchars($contactus['title_phone']) ?>"/>
+			</p>
+			<p>
+				<label for="title">Title: Message</label>
+			</p>
+			<p>
+				<input type="text" name="message" id="message" value="<?= htmlspecialchars($contactus['title_message']) ?>"/>
+			</p>
+	
+				<button class="button-title" type="submit">Change</button>
+		</form>
+	</section>
+</main>

@@ -1,0 +1,49 @@
+<main class="add-new-service">
+	<section class="add-new-service-new">	
+		<section class="add-new-service-total">	
+			<h2>Add new Service</h2>
+			 <form method="post" enctype="multipart/form-data"> 
+					<p>
+						<label for="title">Name of the Service</label>
+					</p>
+					<p>
+						<input type="text" name="title" id="title" value=""/>
+					</p>
+					<p>	
+						<label for="history">Description</label> 
+					</p>
+					<p>
+						<textarea class="text-descprip" name="history" id="history"></textarea>
+					</p>
+					<p>
+						<label for="title_service">Title of the Service</label>
+					</p>
+					<p>
+						<input  type="text" name="title_service" id="title_service" value=""/>
+					</p>
+					<p>
+						<label for='image'>Foto of the Service</label>
+					</p>
+					<p>	
+						<input type="file" name="image" id="image">
+						<input type="hidden" name="imageBdd" id="imageBdd" value=""/>
+					</p>
+					<p>	
+						<label for="nameImage">Name of the foto</label> 
+					</p>
+					<p>
+						<input name="nameImage" id="nameImage"/>
+					</p>
+					<button class="button-title" type="submit">Add</button>
+			</form>
+		</section>
+			<section class="add-new-service">
+				<table>
+					<tr>
+						<td><a class="button-title" href="addnewtypeofservice">Add new type of Service</a></td>
+						<td><a class="button-title" href="addnewnetwork">Add new Network</a></td>
+					</tr>
+				</table>	
+			</section>	
+	</section>	
+</main>

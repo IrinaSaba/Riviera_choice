@@ -1,0 +1,46 @@
+<main class="contactus">
+
+		<h2 class="title-contactus"><?= htmlspecialchars($contactus['title_contact']) ?></h2>
+		<div class="contact-us-pls">
+			<div class="contact-info">
+				<p class="select"><?= htmlspecialchars($contactus['text']) ?></p>
+		
+				<img class="contact-us" src="<?= htmlspecialchars($contactus['src']) ?>" alt="<?= htmlspecialchars($contactus['alt']) ?>">
+			</div>
+			<div class="note"></div>
+				<div class="fields">
+				</div>	
+					<form class="contactus-main" action="#"  method="post">
+						<div class="contact-info-name">
+							<p class="select">
+				    			<label for='name'><?= htmlspecialchars($contactus['title_name']) ?></label>
+				    		</p>
+				    		<p>
+				    			<input type="text" name="name" id="name">
+				    		</p>
+				    		<p class="select">
+				    			<label for='email'><?= htmlspecialchars($contactus['title_email']) ?></label>
+				    		</p>
+				    		<p>
+				    			<input type="email" name="email" id="email">
+				    		</p>
+				    		<p class="select">
+				    			<label for='phone'><?= htmlspecialchars($contactus['title_phone']) ?></label>
+				    		</p>
+				    		<p>
+				    			<input type="tel" name="phone" id="phone">
+				    		</p>
+			    		</div>
+			    		<div class="message-contact">
+						    <p class="select">	
+								<label for="message"><?= htmlspecialchars($contactus['title_message']) ?></label>
+							</p>
+							<p class="text-contact">
+								<textarea class="text-contact"  name="message" id="message"></textarea>
+							</p>
+				    			<button class="button-contact" type="submit">Send</button>
+						</div>
+					</form>
+				
+			</div>	
+</main>

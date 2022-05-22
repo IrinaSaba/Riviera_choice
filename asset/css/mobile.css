@@ -1,0 +1,122 @@
+@media only screen and (max-width: 1024px) {
+p, h2, h3, nav a, td, p.history-day-blog, div.service-story, p.contact-contact, p.contact>a, p.contact, p.history-about  { 
+    font-size: 4.5rem;
+}
+.copyright {
+    padding-top: 30px;
+}
+a.networks>i, a.network>i {
+    font-size: 6.7rem;
+    margin-right: 20px;
+}
+div.blog-agency-date {
+    padding: 5rem;
+}
+p.history-day-blog {
+    padding: 3rem;
+}
+p.history-about {
+   padding:0;
+}
+.network-info-service {
+    display: flex;
+}
+.read-buttons {
+    margin: 0;
+}
+p.tel>a {
+    font-size: 3rem;
+}   
+.contact-invisible {
+  display:none;  
+}
+.history-services, .history-blog, .photo-contact {
+    max-width: 500px;
+}
+img {
+    max-height: 600px;
+}    
+
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 300px;*/
+  position: relative;
+  margin: auto;
+ 
+}
+.logo  {
+    width: 20%;
+}
+a.buttons {
+    font-size: 3rem;
+}
+p.date-blog, h2.comments, p.dates {
+    font-size: 3rem;
+    margin-top: 15px;
+}
+.header {
+    position: static;
+    border: 0;
+}
+.navigation {
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
+}
+.nav {
+  justify-content: center;
+  /*min-width: 100%;*/
+}
+main.history {
+  flex-direction: column;
+  margin-top: 5rem;
+  
+}
+div.aboutusagency, div.blog-agency {
+    flex-direction: column;
+}
+.copyright {
+    text-align: center;
+   
+}
+.logo1 {
+    margin-top: 0.5rem;
+    max-width: 120px;
+}
+.logo-place {
+    padding: 0;
+}
+.contact {
+    padding: 0;
+}
+p.contact {
+    margin-right: 20px;
+}
+.contact-social {
+    display:flex;
+    margin-left: 0;
+}
+main.services, main.blog {
+    margin-top: 0rem;
+}
+div.services-information {
+   flex-direction: column;
+}
+div.blog-agency-full, section.leave-comment, form.contactus-main, main.modifAbout, section.modify-service-by-id, section.modif-photo-slider-art, section.modifFooter {
+ flex-direction: column;
+}
+ textarea.text-contact {
+   max-width: 40rem;
+ }
+main.contactus, main.admin, main.dashboard, main.modifAbout, section.modify-slider-about, main.add-slider-about, section.modify-services-back-end, section.add-new-service-new, section.add-new-type-service, section.add-new-network-service, main.modify-blog-day, main.modify-service-by-id, section.modify-type-service, section.modify-network-service, section.add-new-art, section.add-photo-slider-article, main.modif-photo-slider-art, main.show-all-comments, main.modifFooter, section.modifFooter-network, section.add-footer-network, section.modify-contact {
+  margin-top: 4rem;
+  }
+.contact-us {
+   width: 100%;
+   max-width: 45rem;
+ }  
+  .modify-services-back-end, section.modify-blog-day {
+   overflow-x: auto;
+  }
+  
+
+}

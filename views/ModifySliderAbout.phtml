@@ -1,0 +1,21 @@
+<main class="modify-slider-about">
+	<section class="modify-slider-about">
+		<h2>Modify photo of slider About</h2>
+		<form method="post" enctype="multipart/form-data">
+			<p>
+				<label for='image'>Foto</label>
+			</p>
+			<p>
+				<input type="file" name="image" id="image">
+				<input type="hidden" name="imageBdd" id="imageBdd" value="<?= htmlspecialchars($aboutPhoto['src']) ?>"/>
+			</p>
+			<p>	
+				<label for="nameImage">Name of the foto</label> 
+			</p>
+			<p>
+				<input name="nameImage" id="nameImage"  value="<?= htmlspecialchars($aboutPhoto['alt']) ?>"/>
+			</p>
+			<button class="button-title" type="submit">Modify photo</button>
+		</form>	
+	</section>
+</main>	

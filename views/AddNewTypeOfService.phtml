@@ -1,0 +1,27 @@
+<main class="add-new-type-service">
+	
+		<section class="add-new-type-service">	
+			<h2>Add new type of service</h2>
+			<form method="post" enctype="multipart/form-data"> 
+					<p>
+						<label for="typeService">Choose kind of Service</label>
+					</p>
+					<p>
+						<select name="typeService" id="typeService">
+		    			    <?php foreach($services as  $service): ?>
+			                <option value="<?= htmlspecialchars($service['id']) ?>"><?= htmlspecialchars($service['title']) ?></option>
+			                <?php endforeach; ?>
+			            </select>
+					</p>
+					<p>	
+						<label for="list_services">Add type of service</label> 
+					</p>
+					<p>
+						<input type="text" name="list_services" id="list_services" value=""/>
+					</p>
+				
+					<button class="button-title" type="submit">Add</button>
+			</form>
+		</section>
+
+</main>

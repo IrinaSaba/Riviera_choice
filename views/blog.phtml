@@ -1,0 +1,22 @@
+<main class="blog">
+	<section class="blog-article-comment">
+		 	<?php foreach($articles as $article): ?>
+			<h2><?= htmlspecialchars($article['title']) ?></h2>
+		<section class="blog-agency-full-comment">
+			<div class="blog-agency-full">	
+				<img class="history-blog" src="<?= htmlspecialchars($article['src']) ?>" alt="<?= htmlspecialchars($article['alt']) ?>">
+				<div class="day-blog-button">
+					<p class="history-day-blog"><?= htmlspecialchars($article['description100']) ?></p>
+					<div class="read-buttons">
+						<a class="buttons" href="index.php?page=article&id=<?= htmlspecialchars($article['id']) ?>">Read more</a>
+					</div>
+				</div>
+			</div>
+				<p class="date-blog"> Date of creation : <?= htmlspecialchars($article['date']) ?> </p>
+				<h2 class="comments">Commentaires: <?= htmlspecialchars($article['nb']) ?></h2>
+		</section>	
+			<?php endforeach; ?>
+			
+	</section>		
+			
+</main>

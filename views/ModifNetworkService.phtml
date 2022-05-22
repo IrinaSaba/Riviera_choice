@@ -1,0 +1,26 @@
+<main class="modify-network-service">
+	
+		<section class="modify-network-service">	
+			<h2>Modify network service</h2>
+				<form method="post" enctype="multipart/form-data"> 
+				<p>
+					<label for="nameNetwork">Name of the Network:</label>
+				</p>
+				<p>
+					<select name="nameNetwork" id="nameNetwork">
+					<?php foreach($Networkname as  $Networknam): ?>
+		                <option value="<?= htmlspecialchars($Networknam['id']) ?>"><?= htmlspecialchars($Networknam['name_network']) ?></option>
+		                <?php endforeach; ?>
+		            </select>
+				</p>
+				<p>
+					<label for="networkUrl">URL network :</label>
+				</p>
+				<p>
+					<input type="text" name="networkUrl" id="networkUrl" value="<?= htmlspecialchars($NetworkId['url']) ?>"/>
+				</p>
+					<button class="button-title" type="submit">Change</button>
+				</form>
+		</section>
+
+</main>

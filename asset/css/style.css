@@ -1,0 +1,819 @@
+* {
+  box-sizing: border-box;
+  margin:auto;
+}
+html {
+    background: #D8E2EE;
+}
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+}
+ body { 
+    font-family: 'Dancing Script', cursive;
+    
+    font-size: 16px;
+}
+ div.body { 
+    display: flex;
+    flex-direction: column;
+ }
+ 
+h2, h3 {
+   padding: 2rem;
+   font-size: 3rem;
+   color: #219bc3;
+   text-align:center;
+}
+ img {
+    max-width: 450px;
+    max-height: 450px;
+ }
+.history-services, .history-blog, .photo-contact {
+    max-width: 400px;
+}
+img.photo-aboutus-slider, .photo-article-blog, .photo-article-slider, .photo-contact {
+    max-width: 50px;
+}
+/***************************HEADER****************************/
+
+.header {
+    position: fixed;
+    background: white;
+    z-index: 9;
+    width:100%;
+    
+}
+
+.logo > img {
+    width: 95px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+
+.nav {
+    display: flex;
+    align-items:center;
+    padding: 0.1rem 1rem;
+    border-radius: 0.5rem 3rem;
+    border: double white;
+     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+    color: white;
+    font-weight:bold;
+}
+
+nav a, a.logo, .networks, .contactus a {
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none; 
+   }
+   
+/************************Aboutus*************************/ 
+
+main.history {
+    margin: 17rem 5rem 5rem 5rem;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+    padding: 4rem;
+    display: flex;
+    justify-content: center; 
+}   
+.history-title {
+    font-size:5rem;
+    padding:2rem;
+    color: white;
+    text-align: center;
+    
+}
+   
+div.aboutusagency, div.blog-agency {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+   
+}
+
+p.history-about {
+    width: 100%;
+    padding: 5rem;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/*******************Services********************/
+main.services {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem 5rem 3rem 5rem;
+}
+
+
+div.services-information {
+    display: flex;
+    align-items:center;
+    padding: 3rem;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+  
+}
+div.service-story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 5rem;
+}
+
+a.network>i, td.network>i {
+    color: #fff;
+    padding: 0.5rem 0.1rem;
+    font-size:3rem;
+    
+}
+.separate-service {
+    margin: 2rem;
+}
+
+/********************************Blog***********************************/
+main.blog {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10rem 5rem 3rem 5rem;
+}
+
+section.blog-agency-full-comment {
+    padding: 2rem;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+}
+
+div.blog-agency-full {
+    display: flex;
+    width: 90%;
+    
+    
+}
+
+div.day-blog-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+a.buttons {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    padding: 0.1rem 1rem;
+    border-radius: 0.5rem 3rem;
+    border: double white;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+    color: white;
+    text-align: center;
+   
+} 
+
+p.date-blog, h2.comments {
+     text-align: right;
+     color: #fff;
+     font-weight: bold;
+}
+
+p.history-day-blog  {
+    align-items:center;
+    padding: 3rem;
+    color: #fff;
+    width: 100%;
+    padding: 5rem;
+    font-size: 2.5rem;
+    
+} 
+
+/********************************Blog details***********************************/
+
+div.blog-agency-date {
+    padding: 2rem;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+}
+
+section.leave-comment {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+ 
+p.dates {
+    text-align:center;
+    color: #fff;
+    font-weight: bold;
+} 
+.blog-page-comments {
+    color: #219bc3;
+}
+.select-comment{
+    color: #219bc3;
+}
+div.add-your-comment {
+    margin-top: 3rem;
+    text-align: center;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    padding: 2rem;
+ 
+}
+
+/************************CONTACTUS*************************/
+main.contactus {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10rem 5rem 3rem 5rem;
+}
+div.contact-us-pls {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 2rem 2rem;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+}
+.contact-us {
+   width: 45rem;
+}
+.contact-info>p.select {
+    padding-top: 0.5rem;
+    font-size: 2.3rem;
+    color: #fff;
+    
+}
+div.contact-info-name>p.select {
+    padding: 0.7rem;
+    font-size: 2rem;
+}
+
+form.contactus-main {
+    display:flex;
+    align-items:center;
+    width: 90%;
+    padding: 0.1rem 2rem;
+}
+div.contact-info-name {
+    padding-top: 0.1rem;
+    width: 30%;
+    
+}
+div.message-contact {
+    display:flex;
+    flex-direction:column;
+    padding-top: 3.4rem;
+    width: 80%;
+   
+}
+.select {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+    color: #fff;
+}
+
+p.text-contact {
+    width:100%;
+}   
+
+textarea.text-contact {
+    height: 18rem;
+    width:100%;
+}
+
+.note {
+    font-size: 2.3rem;
+    color: red;
+}
+
+
+button.button-contact {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    padding: 0.1rem 1rem;
+    border-radius: 0.5rem 3rem;
+    border: double white;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+    color: #fff;
+    text-align: center;
+}
+
+/************************** Slideshow container **************************/
+.slideshow-container {
+  max-width: 1100px;
+  position: relative;
+  margin: auto;
+  z-index: 8;
+}
+
+/* cacher des images */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position  "next button"  */
+.next {
+right: 3px;
+}
+[dir='rtl'] .next
+{
+    right: auto;
+    left: -1px;
+}
+
+.prev {
+    left: 1px;
+}
+[dir='rtl'] .next
+{
+    right: auto;
+    left: -1px;
+}
+
+/******************************FOOTER*********************************/
+
+footer.container-footer {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,165,216,1) 17.8%, rgba(33,155,195,1) 100.2% );
+    width: 100%;
+}
+section.container-footer-flex {
+    display: flex;
+    flex-direction: column;
+}
+.copyright {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo1 {
+    max-width: 100px;
+}
+
+p.contact-contact, p.contact>a, p.contact {
+    font-size: 2.5rem; 
+    color:white;
+    
+}
+
+p.tel>a {
+  font-size: 2rem; 
+  color:white;
+ 
+}
+.fa-phone-square-alt {
+    font-size: 2.5rem;
+     color:white;
+}
+
+a.networks>i {
+    font-size: 2.7rem;
+    color: white;
+    
+}
+
+/***************************BACKEND***************************/
+
+/**************************Admin**************************/
+
+main.admin {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 22rem 5rem 13rem;
+}
+section.admin {
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background-color: #fff;
+}
+
+.admin {
+    color: #219bc3;
+}
+
+/**************************Dashboard**************************/
+main.dashboard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 22rem 5rem 9rem;
+}
+.dashboard-section {
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background-color: #fff;
+}
+nav.dashboard a {
+    color: #219bc3;
+}
+
+
+/*******************************ModifyAboutUs********************************/
+
+main.modifAbout {
+    display:flex;
+    width: 90%;
+    padding: 1rem 3rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 16rem 5rem 3rem 5rem;
+    
+}
+
+div.history-info {
+    text-align:center;
+    width: 60%;
+}
+
+textarea.history-about {
+  width: 100%;
+  height: 20rem;
+  
+}
+textarea.nameImage {
+  width: 90%;
+  height: 2rem;
+  
+}
+
+div.history-slider {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align:center;
+    padding-left: 2rem;
+    
+}
+.button-add, .button-add>a {
+    font-family: 'Dancing Script', cursive;
+    font-size:2rem;
+    padding:0.3rem 1rem;
+    margin:1rem;
+}
+
+
+a.clickmodif>i, .clickdelete>i {
+    font-size: 2.7rem;
+    color: #219bc3;
+}
+
+p, th, a     {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 0;
+
+}
+
+/**************************ModifySliderAbout**************************/
+section.modify-slider-about {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 22rem 5rem 10rem 5rem;
+    
+}
+
+
+/***************************AddSliderAbout**************************/
+main.add-slider-about {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 18rem 5rem 10rem 5rem;
+}
+
+section.add-slider-about {
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+}
+
+/***************************ModifyServices**************************/
+main.modify-services {
+    display: flex;
+    width:100%;
+}
+
+section.modify-services-back-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 16rem 5rem 3rem 5rem;
+}
+table {
+    font-size: 1.8rem;
+}
+
+li.network-service-end>a {
+    font-size:1.5rem;
+    text-align: center;
+}
+.table-head-end {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.button-title {
+    font-family: 'Dancing Script', cursive;
+    font-size:2rem;
+    padding:0.2rem 1rem;
+    margin: 2rem 1rem;
+    background-color: #E5E5E5;
+    border-radius: 0.3rem;
+    border: 0.1rem ridge grey;
+    
+    
+}
+/***************************ModifyServiceById**************************/
+main.modify-service-by-id {
+    width: 90%;
+    margin: 16rem 5rem 3rem 5rem;
+}
+section.modify-service-by-id {
+    display: flex;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+}
+section.modif-service-by-id {
+    width: 40%;
+}
+
+textarea.description-service-by-id {
+    width: 100%;
+    height: 10rem;
+}
+
+/***************************ModifyTypeServiceById**************************/
+
+section.modify-type-service {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 19rem 0 17rem 0;
+}
+/***************************ModifyNetworkServiceById**************************/
+section.modify-network-service {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 18rem 0 10rem 0;
+}
+.network-back {
+    color:  #219bc3;
+    font-size: 2.7rem;;
+}
+
+/***************************AddNewServices**************************/
+section.add-new-service-new  {
+    padding: 1rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem; 
+    background: #fff;
+    margin: 16rem 5rem 3rem 5rem;
+}
+
+section.add-new-service-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+}   
+section.add-new-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+textarea.text-descprip {
+    width: 100%;
+    height: 19.5rem;
+   
+}
+
+/***************************AddNewTypeOfServices**************************/
+section.add-new-type-service  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    padding: 1rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem; 
+    background: #fff;
+    margin: 20rem 5rem 10rem 5rem;
+}
+
+/***************************AddNewNetworkServices**************************/
+section.add-new-network-service  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    padding: 1rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 19rem 5rem 3rem 5rem;
+}
+
+/***************************ModifyBlog**************************/
+main.modify-blog-day {
+    margin: 17rem 0 4rem 0;
+    display: flex;
+    width:100%;
+}
+
+section.modify-blog-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+}
+
+td.number>a {
+    font-weight: bold;
+    color: #27B3D9;
+}
+
+/***************************AddnewArt**************************/
+
+section.add-new-art {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 17rem 0 4rem 0;
+}
+ /***************************AddPhotoSliderArt**************************/
+
+section.add-photo-slider-article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 17rem 0 4rem 0;
+}
+
+ /***************************ModifyPhotoSliderArt**************************/
+
+main.modif-photo-slider-art {
+    margin: 17rem 0 4rem 0;
+    display:flex;
+}
+
+section.modif-photo-slider-art {
+    display: flex;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+}
+
+section.modif-photo-slider {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+
+/***************************ShowAllComments**************************/
+
+main.show-all-comments {
+   margin: 20rem 0 17rem 0;
+}
+
+section.show-all-comments {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+}
+/***************************ModifFooter**************************/
+
+main.modifFooter {
+    margin: 17rem 0 4rem 0;
+}
+
+section.modifFooter {
+    display: flex;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+}
+/***************************ModifFooterNetwork**************************/
+
+section.modifFooter-network {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    margin: 18rem 0 10rem 0;
+}
+
+/***************************AddFooterNetwork**************************/
+section.add-footer-network {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 18rem 0 10rem 0;
+}
+/***************************ModifyContact**************************/
+
+section.modify-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    border: double #f0a4ae;
+    border-radius: 3rem;
+    background: #fff;
+    margin: 15rem 0 3rem 0;
+}

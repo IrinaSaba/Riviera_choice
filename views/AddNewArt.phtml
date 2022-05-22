@@ -1,0 +1,35 @@
+<main class="add-new-art">
+    <section class="add-new-art">
+		<h2>Add new Article</h2>
+			 <form method="post" enctype="multipart/form-data"> 
+		  
+				<p>
+					<label for="title">Name of the Article</label>
+				</p>
+				<p>
+					<input type="text" name="title" id="title" value=""/>
+				</p>
+				<p>	
+					<label for="history">Description</label> 
+				</p>
+				<p>
+					<textarea name="history" id="history"></textarea>
+				</p>
+				<p>
+					<label for='image'>Firts Foto of the blog</label>
+				</p>
+				<p>
+					<input type="file" name="image" id="image">
+					<input type="hidden" name="imageBdd" id="imageBdd" value=""/>
+				</p>
+				<p>	
+					<label for="nameImage">Name of the foto</label> 
+				</p>
+				<p>
+					<input name="nameImage" id="nameImage"/>
+				</p>
+		
+					<button class="button-title" type="submit">Add</button>
+			</form>
+	</section>	
+</main>

@@ -1,0 +1,53 @@
+<main class="modify-services">
+	
+  <section class="modify-services-back-end">
+	<h2>Modify Services</h2>
+    	 <table class="modif-services-button">
+        	    <tr> 
+        		    <td><a class="button-title" href="addnewservice">Add new Service</a></td>
+        		    <td><a class="button-title" href="addnewtypeofservice">Add new type of Service</a></td>
+					<td><a class="button-title" href="addnewnetwork">Add new Network</a></td>
+        		 </tr>
+    	 </table>	
+        <table class="modif-services">
+            <tr>
+                <th class="table-head-end">Title</th>
+                <th class="table-head-end">Description</th>
+                <th class="table-head-end">Photo Services</th>
+                <th class="table-head-end">Photo descpription</th>
+                <th class="table-head-end">Title services </th>
+                <th class="table-head-end">List of the services</th>
+                <th class="table-head-end">URL</th>
+				<th class="table-head-end">Modify</th>
+                <th class="table-head-end">Delete</th>
+            </tr>
+           <?php foreach($services as $service): ?>
+            <tr>
+               	<td><?= htmlspecialchars($service['title']) ?></td>
+                <td><?= htmlspecialchars($service['description30']) ?></td>
+                <td><img class="photo-article-blog" src="<?= htmlspecialchars($service['src']) ?>" alt="photo from bdd"></td>
+                <td><?= htmlspecialchars($service['alt']) ?></td>
+                <td><?= htmlspecialchars($service['title_service']) ?></td>
+                <td><?php foreach($listservices as $listservice): ?>
+					<ul>
+    				<?php if($listservice['id_services']== $service['id']):?>
+    					<li><?= htmlspecialchars($listservice['services']) ?> </li> 
+    				<?php endif; ?> 
+					</ul>
+					<?php endforeach; ?></td>
+                <td class="network-service-end"><?php foreach($serviceNetwork as $serviceNet): ?> 
+                    <ul>
+    			    <?php if($serviceNet['id_services']== $service['id']):?>
+    					<li class="network-service-end"><a href="<?= htmlspecialchars($serviceNet['url']) ?>" target="_blank"><?= htmlspecialchars($serviceNet['url']) ?></a></li>
+					<?php endif; ?>
+					</ul>        
+				<?php endforeach; ?></td>
+                <td><a class="clickmodif" href="index.php?page=modifyservice&id=<?= htmlspecialchars($service['id']) ?>"><i class="fas fa-pen-nib"></i></a></td>
+                <td><a class="clickdelete js-confirm-button" data-url="index.php?page=deleteservice&id=<?= htmlspecialchars($service['id']) ?>"><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+           <?php endforeach; ?>
+        </table>
+    
+    </section>
+		
+</main>
